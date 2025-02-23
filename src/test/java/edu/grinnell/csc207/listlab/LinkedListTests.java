@@ -23,6 +23,15 @@ public class LinkedListTests {
         }
         assertEquals(10, list.size());
     }
+    
+    @Test
+    public void listGet() {
+        LinkedList list = new LinkedList();
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
+        assertEquals(0, list.get(1));
+    }
 
     @Property
     public boolean listAddSize(@ForAll @IntRange(min = 0, max = 1000) int sz) {
